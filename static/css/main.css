@@ -104,7 +104,6 @@ aside, nav, article, figure {
 }
 
 .entry-title { 
-    font-size: 1.2em; 
     margin-bottom: 5px; 
     display: inline
 }
@@ -128,9 +127,12 @@ aside, nav, article, figure {
     margin: 5px 0;
 }
 
-
 #post-list {list-style: none; margin: 0;}
 #post-list .hentry {padding-left: 10px; position: relative;}
+
+.post-title {
+    margin: 20px 0 10px 0;
+}
 
 #sidebar {
     width: 20%;
@@ -189,36 +191,6 @@ nav.links a {
     height: 20px;
 }
 
-#leftnav {
-    position: relative;
-    top:20px;
-    left: 30px;
-}
-
-#leftnav img {
-    width: 60px;
-    height: 60px;
-    opacity: 0.5;    
-}
-
-#leftnav img:hover {
-    opacity: 1;
-}
-
-.post-info {
-    float:right;
-    margin:10px;
-    padding:5px;
-}
-
-.post-title {
-    margin: 20px 0 10px 0;
-}
-
-.post-info p{
-    margin-bottom: 1px;
-}
-
 #topnav {
     display: none;
     width: 100%;
@@ -244,6 +216,7 @@ and (max-device-width : 480px) {
     #content {
         width: 95%;
         margin: 20px;
+
     }
 
     #topnav {
