@@ -5,7 +5,7 @@
         <title>Ram Parthasarathy</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="./static/css/main.css" type="text/css" />
-        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Parthasarathy ATOM Feed" />
+        <link href="./" type="application/atom+xml" rel="alternate" title="Ram Parthasarathy ATOM Feed" />
         
 
         
@@ -43,14 +43,31 @@
                         
 <section id="content" class="body">    
         <header> <h3 class="post-title"><a href="" rel="bookmark" title="Permalink to Static blog using pelican and github pages">Static blog using pelican and github pages</a></h3> 
-                <abbr class="post-date published" title="2012-10-22T00:00:00">
-                        Oct 22, 2012
+                <abbr class="post-date published" title="2012-10-01T00:00:00">
+                        Oct 01, 2012
                 </abbr>
 
         </header>
 
         <div class="entry-content">
-        <p>New static blog</p>
+        <p>Over the last six years, i have blogged in many different places both for fun and profit. It helped me meet many interesting folks through blog meets and various conferences and in the journey i also made some great friends. In the recent times, i completely stopped writing and publishing my thoughts. Thanks to twitter, there was always a place to express one's thoughts in a short and fast manner. Even though i had a couple of dormant blogs, i didn't feel like publishing there when i wanted to. Hopefully, this new setup will change that. After spending some time and exploring a few different options, i decided to go with <a href="http://pelican.notmyidea.org/">Pelican</a>.</p>
+<p>I knew i wanted a static blog and also one than ran on python rather than ruby. So, that eliminated the more popular static blog generators like Jekyll, Octopress framework and many more. There are a few other python based static blog generators that work well out of the box and are more popular than Pelican but i liked the configurability of Pelican and the ease of writing a custom theme using Jinja templates.</p>
+<p>These were the basic requirements that i had</p>
+<ul>
+<li>Write posts in Markdown</li>
+<li>Easy templating and theming</li>
+<li>Basic command line tools</li>
+<li>Setup the blog as a local git repository and push to github</li>
+<li>Easy publishing to S3, Github or Heroku</li>
+</ul>
+<p>I created two git repositories, one to hold all the scripts and setup files from Pelican and the other to hold the static content. Currently i am publishing the static blog to the free and wonderful Github Pages. If you create a username.github.com repo in your account, github will automatically generate and publish the content in the master branch. I used <a href="http://docs.fabfile.org/en/1.4.3/index.html">Fabric</a> to completely automate this process. Whenever, i write a new post or make changes to the theme, all i have to do is type in 'fab publish' and it does a few sequential steps and pushes the master branch to origin.</p>
+<p>I used the templates from the base theme and made a custom theme. Thanks to media queries, the site is now responsive and is readable on tablets and touch phones. I still have to make some more tweaks and refinements in that department though. The thing i like about this setup is it wouldn't be very hard to switch over to a different static blog generator in the future if i want to. Eventhough it took a good amount of time to get the blog up and running, it was definitely a satisfying experience. </p>
+<p>References </p>
+<ol>
+<li><a href="http://pelican.notmyidea.org/en/3.0/index.html#documentation">Pelican docs</a> </li>
+<li><a href="http://martinbrochhaus.com/2012/02/pelican.html">A good intro to publishing with pelican</a></li>
+<li><a href="https://help.github.com/categories/20/articles">Github pages</a></li>
+</ol>
         </div>
         <div id="disqus_thread"></div>
          <script type="text/javascript">
