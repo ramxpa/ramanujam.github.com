@@ -1,0 +1,815 @@
+
+/* 
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.nl */
+@font-face {
+  font-family: "Fertigo";
+  src: url(http://ramanuj.me/fonts/Fertigo_PRO.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url(http://ramanuj.me/fonts/Museo300-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=DTPeM3IROhnkz7aYG2a9sA') format('truetype');
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=UkFsr-RwJB_d2l9fIWsx3i3USBnSvpkopQaUR-2r7iU') format('truetype');
+}
+
+body { 
+	  background:url(../images/bg.png) repeat; 
+	  overflow: auto;
+		font-family: "Museo", Arial, Helvetica, sans-serif ;
+		text-decoration: none;
+		text-transform: none;
+		letter-spacing: 0em;
+		word-spacing: 0em;
+		line-height: 1em;
+}
+
+#wrapper {
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: url(../images/cont4.png) repeat;
+ 	height: 570px;
+	margin-top:30px;
+  	border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	-webkit-border-radius: 10px;
+  	box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+
+
+}
+
+
+header{
+	color: #e7e7e7;
+	height:80px;
+    background: url(../images/header.png) repeat;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+  	-webkit-border-radius-topleft: 10px;
+	-webkit-border-radius-topright: 10px;
+  	box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+
+
+
+
+header h2{
+	font-size: 38px;
+	text-shadow: 2px 2px 2px #000;
+	float: left;
+	margin: 28px 0 0 30px;
+	
+}
+
+
+#nav{
+	float: right;
+	
+}
+
+#nav li{
+	font-size: 20px;
+	text-shadow: 2px 2px 2px #000;
+	list-style: none;
+	float:left;
+	margin-top: 30px;
+	padding: 0 20px 0 5px;
+	
+}
+
+#nav li a{
+	color:#e7e7e7;
+}
+
+#nav li a:hover{
+	color:#818181;
+}
+
+
+#introtext, #porttext h2{
+	float: left;
+	width: 750px;
+	font-size: 78px ;
+	margin: 20px 20px 0 30px;
+	font-family: 'Tangerine','Playbill', sans-serif; 
+	font-size: 78px;
+	font-style: normal;
+	font-weight: 800;
+	text-shadow: 2px 2px 2px #aaa;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 0em;
+	word-spacing: 0em;
+	line-height: 1em;
+
+}
+
+#click{
+	cursor:pointer;
+}
+
+
+#popup {
+	background-color: #ffffff;
+	height: 200px;
+	width:300px;
+	display:none;
+	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+	border: 5px solid #cccfd3;
+	font-size:16px;
+	}
+	
+#popup h3{
+	font-size: 28px;
+	text-align:center;
+	font-style: normal;
+	padding-top:30px;
+}	
+
+
+#popup ul li{
+	padding: 25px 0 0 32px;
+	list-style:none;
+
+}
+
+.bClose {cursor:pointer;font-weight:bold;position:absolute;right:15px;text-decoration:none;top:10px;}
+
+
+#ribbon{
+	float:right;
+	margin-top: 50px;
+	height: 100px;
+	width: 250px;
+
+	color:#e7e7e7;	
+}
+#ribbon{
+	float:right;
+	margin-top: 50px;
+	height: 100px;
+	width: 250px;
+	color:#e7e7e7;	
+}
+
+#ribbon h3{
+	font-size: 16px ;
+	padding:56px 0 0 56px;
+	text-align:center;
+	
+}
+
+#ribbon h3 a{
+	color:#e7e7e7;	
+	text-decoration: underline;
+	
+}
+
+#ribbon h3 a:hover{
+	color:#444;
+}
+
+#portfolio{
+	margin: 330px 20px 0 0;
+
+}
+
+
+
+#filler{
+	text-align:center;
+	padding-top:120px;
+}
+
+
+#bottomwrap{
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: url(../images/cont4.png) repeat;
+ 	height: 600px;
+	margin-top:20px;
+	margin-bottom:30px;
+  	border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	-webkit-border-radius: 10px;
+  	box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+		
+	
+}
+
+
+#getintouch{
+	background: url(../images/ribbonb3.png) no-repeat;
+	width:300px;
+	margin: 5px 0 0 0;
+	height:60px;
+
+	
+}
+
+#getintouch h1{
+	font-size: 22px ;
+	margin: 0px 30px 0 30px;
+	text-shadow: 0px -1px 0px #3D3D3D;
+	padding-top:30px;
+    
+}
+
+#getintouch ul li{
+	list-style:none;
+	margin-top: 22px;
+
+}
+
+ul#social li{
+padding: 23px 0 0 75px;
+}
+
+
+ul#social li a{
+	
+text-decoration:none;
+}
+
+ul#social li.linkedin{
+background: url(../images/linkedin.png) no-repeat;
+height:60px;
+}
+
+ul#social li.twitter{
+background: url(../images/twitter.png) no-repeat;
+height:60px;
+}
+ul#social li.facebook{
+background: url(../images/facebook.png) no-repeat;
+height:60px;
+}
+ul#social li.socialcouch{
+background: url(../images/socialcouch.png) no-repeat;
+height:60px;
+}
+
+
+
+#powered{
+	background: url(../images/ribbonb3.png) no-repeat;
+	margin: 390px 0 0 0;
+	height:60px;
+
+}
+
+#powered h1{
+	
+	font-size: 20px ;
+	margin: 0px 30px 0 30px;
+	text-shadow: 0px -1px 0px #3D3D3D;
+	padding-top:45px;
+}
+
+
+
+#powered ul li{
+    vertical-align: middle;
+    float:left;
+    margin: 20px 40px 0 30px;
+
+}
+
+
+
+
+.tweet_odd, .tweet_even {
+	list-style:none;
+
+}
+	
+.tweet_text{
+		
+		float:right;
+		width:650px;
+		margin:20px 50px 0 60px;
+		border: 3px solid #cccfd3;
+		padding: 10px 0 5px 40px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background: url(../images/bird.png) no-repeat;
+		padding-left:40px;
+		line-height: 1.2em;
+}	
+
+.tweet_time{
+display:none;
+}
+
+
+#feed li{
+	float:right;
+	width:650px;
+	margin:20px 50px 0 60px;
+	list-style:none;
+	border: 3px solid #cccfd3;
+	padding: 10px 0 5px 40px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding-left: 40px;
+	background: url(../images/feed.png) no-repeat;
+	height:18px;
+	
+	
+	
+	
+}
+
+
+
+
+
+#feed li a{
+text-decoration:none;	
+	color: #3d3d3d;
+}
+
+#feed li a:hover{
+	color:#607890;
+}
+
+ul#poweredimg li{
+	
+	list-style:none;
+}
+
+
+
+ul#poweredimg li.boilerplate{
+background: url(../images/boilerplate.png) no-repeat;
+margin-left: 60px;
+padding: 18px 0 0 60px;
+height:48px;
+}
+
+ul#poweredimg li.fontapi{
+background: url(../images/fontapi.png) no-repeat;
+padding: 18px 0 0 60px;
+height:48px;
+}
+
+ul#poweredimg li.jqueryicon{
+background: url(../images/jquery.png) no-repeat;
+padding: 18px 0 0 60px;
+height:48px;
+}
+
+ul#poweredimg li.coffee{
+background: url(../images/coffee.png) no-repeat;
+padding: 18px 0 0 60px;
+height:48px;
+}
+
+.roundabout-holder {
+				list-style: none;
+					
+}
+			
+.roundabout-moveable-item {
+				margin : 0px auto;
+				cursor: pointer;
+			
+}
+			
+.roundabout-in-focus {
+			cursor: auto;
+}
+		
+.roundabout-moveable-item img {
+			height: 12em;
+			width: 25em;
+}
+						
+
+/* -------Styling for the portfolio page-------------- */
+
+#portwrapper{
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
+	height:2200;
+	background: url(../images/cont4.png) repeat;
+ 	margin-top:30px;
+	margin-bottom:30px;
+  	border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	-webkit-border-radius: 10px;
+  	box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	
+	
+}
+
+#portthumbs{
+	float:right;
+	margin-left: 170px;
+}
+
+#portthumbs li{
+	float:left;
+	list-style:none;
+	
+}
+
+#portthumbs li img{
+	height:99px;
+	width:200px;
+	margin-top: 10px;
+	padding: 0 50px 20px 2px;
+	
+}
+
+.sepr{
+	border:3px solid #1A1F2D;
+	margin-bottom:30px;
+	margin-top:390px;
+	opacity:0.3;
+	box-shadow: 0px 0px 5px rgba(0,0,0,1);
+  	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,1);
+  	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,1);
+}
+
+.sepr hr{
+	display:none;
+}
+
+
+#portdisp{
+	margin:20px 50px 0 20px;
+}
+.portimg{
+	float:left;
+	padding-left:30px;
+	width:600px;
+	
+}
+
+.portcontent{
+	width:400px;
+	float:right;
+}
+
+.portcontent h2{
+	font-size:24px;
+	margin: 60px 0 0 20px;
+	text-transform:uppercase;
+	text-shadow: 2px 2px 2px #aaa;
+	
+}
+
+.portcontent p{
+	padding: 20px 0 0 20px;
+	letter-spacing: 0em;
+	word-spacing: 0em;
+	line-height: 1.3em;
+}
+
+.portcontent p a{
+	color: #e7e7e7;
+}
+
+.button {
+   border-top: 1px solid #222a3c;
+   background: #232b3d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6076a3), to(#232b3d));
+   background: -moz-linear-gradient(top, #6076a3, #232b3d);
+   padding: 4px 12px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 3px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 3px 0;
+   box-shadow: rgba(0,0,0,1) 0 3px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+        	
+   }
+
+
+
+.button:hover, {
+   border-top-color: #6076a3;
+   background: #6076a3;
+   color: #ccc;
+   }
+.button:active ,  {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+
+#resumecontent{
+	width:850px;
+	margin: 50px 0px 30px 150px;
+	line-height: 1.2em;
+}
+
+
+
+#resumecontent h1{
+	text-align:center;
+	font-size: 24px;
+	color: #620003;
+}
+
+#resumecontent h3{
+	text-align:center;
+	font-size: 18px;
+	padding-top:5px;
+	
+}
+
+.endtext{
+	margin-bottom:10px;
+	}
+
+#resumecontent a, header a{
+		color: #e7e7e7;
+	}
+
+.resheading{
+	margin-bottom: 10px;
+	color: #620003;
+	text-transform: uppercase;
+}
+
+.restext{
+	margin: 0 0 10px 20px;
+}
+
+
+
+footer p{
+	text-align:center;
+	color: #e7e7e7;
+	font-size: 12px;
+	padding-bottom:3px;
+}
+
+footer a, footer a:visited, footer a:hover, header a, header a:visited, header a:hover{
+	color: #e7e7e7;
+}
+
+.ccimage{
+	vertical-align: middle;
+	border: 0;
+}
+
+table { font-size:inherit; font:100%; }
+select, input, textarea { font:99% sans-serif; }
+
+
+/* 
+ * minimal base styles 
+ */
+
+
+/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+body, select, input, textarea { color:#444; }
+
+/* Headers (h1,h2,etc) have no default font-size or margin,
+   you'll want to define those yourself. */ 
+ 
+ 
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a, a:hover, a:active { outline: 0;  }
+
+a, a:active, a:visited { color:#444; text-decoration:none; }
+a:hover { color:#20293B; }
+
+
+ul { margin-left:30px; }
+ol { margin-left:30px; list-style-type: decimal; }
+
+small { font-size:85%; }
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align:top; } 
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre { 
+  padding: 15px; 
+  
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+
+/* These selection declarations have to be separate.
+   No text-shadow: twitter.com/miketaylr/status/12228805301 
+   Also: hot pink. */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; } 
+
+
+
+
+/* make buttons play nice in IE:    
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+ 
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+
+/* 
+ * Non-semantic helper classes 
+ */
+
+/* for image replacement */
+.ir { display:block; text-indent:-999em; overflow:hidden; background-repeat: no-repeat; }
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display:none; visibility:hidden; } 
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/ 
+   Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal! */
+.visuallyhidden { position:absolute !important;    
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* >> The Magnificent CLEARFIX << */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; } /* Hides from IE-mac \*/
+.clearfix { display: block; }
+
+
+
+
+
+ /* Primary Styles
+    Author: 
+ */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none; }
+
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+
+  a:after { content: " (" attr(href) ")"; } 
+
+  abbr:after { content: " (" attr(title) ")"; }
+  
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  
+  img { page-break-inside: avoid; }
+
+  @page { margin: 0.5cm; }
+
+  p, h2, h3 { orphans: 3; widows: 3; }
+
+  h2, h3{ page-break-after: avoid; }
+}
+
+
+
+/*
+ * Media queries for responsive design
+ */
+
+@media all and (orientation:portrait) { 
+  /* Style adjustments for portrait mode goes here */
+  
+}
+
+@media all and (orientation:landscape) { 
+  /* Style adjustments for landscape mode goes here */
+  
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  
+  
+  /* Prevent iOS, WinMobile from adjusting font size */
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+}
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css" media="screen"/>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.validationEngine-en.js" type="text/javascript"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript"></script>
+
+
+
+
+
+
+<title>Form Design with HTML5 and CSS3</title>  
+</head>
+
+<body>
+
+<script>   
+      $(document).ready(function() {
+      $("#userform").validationEngine()
+      })
+</script>
+
+<header id="introtext">
+<h1>HTML5 and CSS3 Webform with Inline jQuery Validation</h1>
+</header>
+ 
+ 
+
+ 
+
+<form id=userform>
+	<fieldset>
+		<legend>User Information</legend>
+		<ol>
+			<li>
+				<label for=username>Username</label>
+				<input  class="validate[required,custom[noSpecialCharacters],length[0,20]" type=text name=username id=username   									placeholder="Select an username" required autofocus>
+			</li>	
+			<li>
+				<label for=password>Password</label>
+				<input class="validate[required,length[6,20]]" type=password name=password id=password placeholder="Select a password" required>
+			
+				<label for=repassword>Confirm Password</label>
+				<input class="validate[required,confirm[password]]" type=password name=repassword id=repassword placeholder="Retype the password" 				required >
+			</li>
+			
+			<li>
+				<label for=email>Email</label>
+				<input class="validate[required,custom[email]" type=email name=email id=email placeholder="Eg: name@gmail.com" required>
+			</li>
+			
+		</ol>
+		
+	</fieldset>
+
+
+	<fieldset>
+		<legend>Shipping Information</legend>	
+		<ol>
+			<li>
+				<label>First Name</label>
+				<input class="validate[required,custom[onlyLetter],length[0,100]]" type=text name=firstname id=firsrtname 
+				placeholder="Enter First Name" required>
+			</li>
+			<li>
+				<label>Last Name</label>
+				<input class="validate[required,custom[onlyLetter],length[0,100]]" type=text name=lastname id=lastname placeholder="Enter Last Name" 				required>
+			</li>
+			<li>
+				 <label for=address1>Address 1</label>
+				 <input type=text name=address1 id=address1 placeholder="Enter Line 1 - Street, PO Box etc" required> 	
+			</li>
+			<li>	 
+				 <label for=address2>Address 2</label>
+				 <input type=text name=address2 id=address2 placeholder="Enter line 2 - Apt, floor, suite etc"> 		
+			</li>		
+			<li>
+				<label for=zipcode>ZipCode</label>
+				<input class="validate[required,custom[onlyNumber]]" type=text name=zipcode id=zipcode  required>
+			
+				<label for=state>State</label>
+				<input class="validate[required,custom[onlyLetter]]" type=text name=state id=state   required>
+			</li>
+			<li>
+				<label for=country>Country</label>
+				<input class="validate[required,custom[onlyLetter]]" type=text name=country id=country  required>
+			
+				<label for=phone>Phone</label>
+				<input class="validate[optional,custom[telephone]]" type=tel name=phone id=phone placeholder="Eg. 540-449-1111" required>
+			</li>
+			
+			<li>
+				<fieldset>
+				
+					<legend>Shipping Type</legend>
+					<ol>
+					<li>
+						<input type=radio name=free id=free>
+						<label for="free">Free Shipping ($0)</label>
+					</li>
+					<li>
+						<input type=radio name=3day id=3day>
+						<label for="3day">3 day Shipping ($5)</label>
+					</li>
+					<li>
+						<input type=radio name=overnight id=overnight>
+						<label for="overnight">Overnight Shipping ($9)</label>
+					</li>
+					</ol>
+				
+				</fieldset>
+			
+			
+			</li>
+				
+		</ol>
+	</fieldset>
+	
+	
+	<fieldset>
+		<legend>Payment Information</legend>
+		
+		<ol>
+			<li>
+				<label for=cardname>Name</label>
+				<input class="validate[required,custom[onlyLetter],length[0,100]]" type=text name=cardname id=cardname  
+				placeholder="As it appears on the card" required>
+			</li>
+			<li>
+				<label for=cardnumber>Card number</label>
+				<input class="validate[required,custom[onlyNumber]]" type=number name=cardnumber id=cardnumber   required>
+			</li>
+			<li>
+				<label for=cvvcode>Security code</label>
+				<input class="validate[required,custom[onlyNumber]]" type=number name=cvvcode id=cvvcode   required>
+			</li>		
+		</ol>
+	</fieldset>
+	
+	<fieldset>
+		<button type=submit>Check Out</button>
+	</fieldset>
+	
+</form>	
+
+<div id="content">
+<p>This webform presents itself with all the HTML5 and CSS3 goodness when viewed on Chrome, Safari or Firefox 3.5. It makes use of some of the recently introduced HTML5 tags making the mark-up meaningful and also some nifty CSS3 properties to enhance the look and feel. The inline validation is made possible with the awesome <a href="http://www.position-absolute.com/articles/jquery-form-validator-because-form-validation-is-a-mess/" target="_blank">jQuery plugin</a> from Cedric Dugas</p>
+
+<p>This was built using the examples from the <a href="http://www.w3.org/TR/html5/forms.html" target="_blank">W3C HTML5 forms</a> page. The markup and design are similar to the one illustrated in this fabulous tutorial by Inayaili de Leon for <a href="http://24ways.org/2009/have-a-field-day-with-html5-forms" target="_blank">24Ways.org</a></p>
+
+<p>This webform can be used for both personal and commercial use without any attributions</p>
+
+<button id="download"><a href="http://ramanuj.me/demos/html5webform.zip">Download</a></button>
+
+</div>
+
+
+
+
+
+</body>
+</html>
