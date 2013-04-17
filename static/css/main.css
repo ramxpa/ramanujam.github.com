@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h3, h4, h5, h6 { margin-top: .8em; }
 
+.entry-content h4 {
+    border-bottom: 1px solid #616161;
+    margin-bottom: 10px;
+    padding-bottom: 3px;    
+}
+
 hr { border: 2px solid #EEEEEE; }
 
 /* Anchors */
@@ -189,6 +195,10 @@ nav.links a {
     display: block;
     border-bottom: 1px solid #eee;
     height: 20px;
+}
+
+.center-img {
+    text-align: center;
 }
 
 #topnav {
