@@ -52,6 +52,7 @@ optiIntel.init = function () {
         script.onload = script.onreadystatechange = function(){
             if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
                 done = true;
+                optiIntel.detectOptiExperiments();
             }
         };
         document.getElementsByTagName("head")[0].appendChild(script);
