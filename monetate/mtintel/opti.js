@@ -4,21 +4,18 @@ var optiIntel = window.optiInfo || {};
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
     var allExperiments = opti.allExperiments;
-    var activeExperiments = opti.activeExperiments;
+    var allActions = window.optimizely.allVariations;
 
-    var allnum = Object.getOwnPropertyNames(allExperiments).length;
-    var activenum = Object.getOwnPropertyNames(activeExperiments).length;
-
-    var experimentNames = [];
-
-    jQuery.each(allExperiments, function( key, value ) {
-        experimentNames.push(value.name);
+    var optiData = {};
+    
+    jQuery.each(allExperiments, function(key, value) {
+        optiData[key] = value.name;
     });
 
-    console.log('Experiment names', experimentNames);
+    console.log('Experiment names', optiData);
 
-    optiIntel.insertDisplayPanel(experimentNames);
-
+    optiIntel.insertDisplayPanel(optiData);
+    optiIntel.insertData(optiData);
 };
 
 optiIntel.insertDisplayPanel = function(experimentNames) {
@@ -34,13 +31,15 @@ optiIntel.insertDisplayPanel = function(experimentNames) {
             containerDiv.appendChild(displayPanel);
             displayPanel.id = 'optiintel-panel';
         }
+    }
+};
 
-        for (i = 0; i < experimentNames.length; i ++) {
-            var expLi = document.createElement('li');
-            expLi.innerText = experimentNames[i];
-            displayPanel.appendChild(expLi);
-        }
 
+optiIntel.insertData = function(campaignData) {
+    for (i = 0; i < campaignData.length; i ++) {
+        var expLi = document.createElement('li');
+        expLi.innerText = campaignData[i];
+        // displayPanel.appendChild(expLi);
     }
 };
 
