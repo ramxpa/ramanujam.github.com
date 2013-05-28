@@ -4,18 +4,39 @@ var optiIntel = window.optiInfo || {};
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
     var allExperiments = opti.allExperiments;
-    var allActions = window.optimizely.allVariations;
+    var allVariations = window.optimizely.allVariations;
 
-    var optiData = {};
+    var optiData = {
+        'name': '',
+        'id': '',
+        'variation_ids': [],
+        'variation_names': []
+    };
     
-    jQuery.each(allExperiments, function(key, value) {
-        optiData[key] = value.name;
+    var dataArr = jQuery.map(allExperiments, function(value, key){
+        optiData.name = value.name;
+        optiData.id = key;
+        optiData.variation_ids = value.variation_ids;
+        optiData.variation_names = getVariationNames(value.variation_ids);
+        return optiData;
     });
 
-    console.log('Experiment names', optiData);
+    function getVariationNames(variation_ids) {
+        var variationNames;
+        for (var i = 0; i < variation_ids; i++) {
+            jQuery.each(allVariations, function(key, value){
+                if (key == variation_ids[i]){
+                    variationNames.push(value.name);
+                }
+            });
+        }
+        return variationNames;
+    }
 
-    optiIntel.insertDisplayPanel(optiData);
-    optiIntel.insertData(optiData);
+    console.log('Opti Data ------', dataArr);
+
+    optiIntel.insertDisplayPanel(dataArr);
+    optiIntel.insertData(dataArr);
 };
 
 optiIntel.insertDisplayPanel = function(experimentNames) {
