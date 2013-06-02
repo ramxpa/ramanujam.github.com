@@ -70,14 +70,9 @@
 /*Bootstrap Styles
 */
 
-#mtintel-wrapper h1,
-#mtintel-wrapper h2,
-#mtintel-wrapper h3 {
-  line-height: 40px;
-}
-
 #mtintel-wrapper h2 {
-  font-size: 31.5px;
+  font-size: 22px;
+  color: #3d3d3d;
 }
 
 #mtintel-wrapper .navbar {
