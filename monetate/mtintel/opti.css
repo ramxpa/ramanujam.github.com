@@ -2,8 +2,8 @@
   position: fixed;
   width: 900px;
   margin: 0 auto;
-  overflow: auto;
-  min-height : 400px;
+  overflow-x: hidden;
+  min-height : 600px;
   z-index: 2147483647;
   top:0px;
   background-color: #f4f5f6;

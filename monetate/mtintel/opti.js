@@ -13,7 +13,7 @@ optiIntel.detectOptiExperiments = function(){
         optiExp.id = key;
         optiExp.variation_ids = value.variation_ids;
         optiExp.variation_names = optiIntel.getVariationNames(value.variation_ids, allVariations);
-        optiExp.enabled = value.enabled ? 'true' : 'false';
+        optiExp.enabled = value.enabled ? 'Yes' : 'No';
         optiData.push(optiExp);
     });
 
@@ -67,10 +67,24 @@ optiIntel.insertData = function(optiData) {
     for (var i =0; i < optiData.length; i++) {
         var expRow = document.createElement('tr');
         expRow.className = 'exp-data-row';
+
+        var variationNames = getVariationHtml(optiData[i].variation_names);
+
         expRow.innerHTML= '<td class="exp-name">'+ optiData[i].name +'</td>'+
-                      '<td class="var-name">'+ optiData[i].name +'</td>'+
+                      '<td class="var-name"></td>'+
                       '<td class="isactive">'+ optiData[i].enabled +'</td>';
         expDataTable.append(expRow);
+    }
+
+    function getVariationHtml(variationNames){
+        var variationUl = document.createElement('ul');
+        variationUl.className = "variations-list";
+        for (var k = 0; k < variationNames.length; k++) {
+            var variationLi = document.createElement('li');
+            variationLi.innerHTML = variationNames[k];
+            variationUl.appendChild(variationLi);
+        }
+        $('.var-name').html(variationUl);
     }
 };
 
