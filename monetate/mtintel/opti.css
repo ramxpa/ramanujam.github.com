@@ -70,25 +70,17 @@
 /*Bootstrap Styles
 */
 
-.navbar-inner {
-  background-color: #1b1b1b;
-  background-image: -moz-linear-gradient(top, #222222, #111111);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-  background-image: -webkit-linear-gradient(top, #222222, #111111);
-  background-image: -o-linear-gradient(top, #222222, #111111);
-  background-image: linear-gradient(to bottom, #222222, #111111);
-  background-repeat: repeat-x;
-  border-color: #252525;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+#mtintel-wrapper h1,
+#mtintel-wrapper h2,
+#mtintel-wrapper h3 {
+  line-height: 40px;
 }
 
+#mtintel-wrapper h2 {
+  font-size: 31.5px;
+}
 
-.navbar {
-  display: none;
-  float: right;
-  padding: 7px 10px;
-  margin-right: 5px;
-  margin-left: 5px;
+#mtintel-wrapper .navbar {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #ededed;
@@ -109,20 +101,20 @@
 }
 
 
-table {
+#mtintel-wrapper table {
   max-width: 100%;
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.table {
+#mtintel-wrapper .table {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.table th,
-.table td {
+#mtintel-wrapper .table th,
+#mtintel-wrapper .table td {
   padding: 8px;
   line-height: 20px;
   text-align: left;
@@ -130,38 +122,38 @@ table {
   border-top: 1px solid #dddddd;
 }
 
-.table th {
+#mtintel-wrapper .table th {
   font-weight: bold;
 }
 
-.table thead th {
+#mtintel-wrapper .table thead th {
   vertical-align: bottom;
 }
 
-.table caption + thead tr:first-child th,
-.table caption + thead tr:first-child td,
-.table colgroup + thead tr:first-child th,
-.table colgroup + thead tr:first-child td,
-.table thead:first-child tr:first-child th,
-.table thead:first-child tr:first-child td {
+#mtintel-wrapper .table caption + thead tr:first-child th,
+#mtintel-wrapper .table caption + thead tr:first-child td,
+#mtintel-wrapper .table colgroup + thead tr:first-child th,
+#mtintel-wrapper .table colgroup + thead tr:first-child td,
+#mtintel-wrapper .table thead:first-child tr:first-child th,
+#mtintel-wrapper .table thead:first-child tr:first-child td {
   border-top: 0;
 }
 
-.table tbody + tbody {
+#mtintel-wrapper .table tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 
-.table .table {
+#mtintel-wrapper .table .table {
   background-color: #ffffff;
 }
 
-.table-condensed th,
-.table-condensed td {
+#mtintel-wrapper .table-condensed th,
+#mtintel-wrapper .table-condensed td {
   padding: 4px 5px;
 }
 
-.table-striped tbody > tr:nth-child(odd) > td,
-.table-striped tbody > tr:nth-child(odd) > th {
+#mtintel-wrapper .table-striped tbody > tr:nth-child(odd) > td,
+#mtintel-wrapper .table-striped tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
 
