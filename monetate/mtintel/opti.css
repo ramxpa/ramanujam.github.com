@@ -1,0 +1,70 @@
+#mtintel-container {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 400px;
+}
+
+#mtintel-wrapper p, #mtintel-wrapper h1, #mtintel-wrapper h2, #mtintel-wrapper h3, #mtintel-wrapper h4, #mtintel-wrapper h5, #mtintel-wrapper h6 {
+  margin-top: 0 !important;
+}
+#mtintel-wrapper {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  height: 1px;
+}
+#mtintel-wrapper .navbar {
+  width: 940px;
+  height: 42px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#mtintel-wrapper .navbar .navbar-inner {
+  height: 42px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#mtintel-wrapper .heading {
+  font-family:"helvetica";
+  width: 297px;
+  height: 42px;
+  position: absolute;
+  top: 0px;
+  left: 11px;
+}
+
+#mtintel-wrapper .table.table-striped {
+  width: 400px;
+  height: 53px;
+  position: absolute;
+  top: 54px;
+  left: 265px;
+}
+
+#mtintel-wrapper .table {
+  position: absolute;
+}
+
+#mtintel-wrapper .table.table-1 {
+  width: 807px;
+  height: 168px;
+  top: 173px;
+  left: 46px;
+}
+
+#mtintel-wrapper .table.table-1 thead tr th.th-1 {
+  width: 284px;
+}
+
+#mtintel-wrapper .table.table-1 thead tr th.th-2 {
+  width: 384px;
+}
+
+#mtintel-wrapper .table.table-1 thead tr th.th-3 {
+  width: 84px;
+}
