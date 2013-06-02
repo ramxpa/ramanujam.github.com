@@ -22,7 +22,7 @@ optiIntel.detectOptiExperiments = function(){
 
     var activeCount = 0;
     for (var i = 0; i < optiData.length; i++) {
-        if (optiData[i].enabled === 'true') {
+        if (optiData[i].enabled === 'Yes') {
             activeCount++;
         }
     }
@@ -71,7 +71,7 @@ optiIntel.insertData = function(optiData) {
         var variationNames = getVariationHtml(optiData[i].variation_names);
 
         expRow.innerHTML= '<td class="exp-name">'+ optiData[i].name +'</td>'+
-                      '<td class="var-name"></td>'+
+                      '<td class="var-name">'+ variationNames.innerHTML + '</td>'+
                       '<td class="isactive">'+ optiData[i].enabled +'</td>';
         expDataTable.append(expRow);
     }
@@ -84,7 +84,7 @@ optiIntel.insertData = function(optiData) {
             variationLi.innerHTML = variationNames[k];
             variationUl.appendChild(variationLi);
         }
-        $('.var-name').html(variationUl);
+        return variationUl;
     }
 };
 
