@@ -9,7 +9,12 @@ else {
 }
 
 function insertOpticode() {
-    var optiCode = document.createElement('script'); 
-    optiCode.setAttribute('src', 'http://ramanuj.me/monetate/mtintel/opti.js');                  
-    document.body.appendChild(optiCode); 
+    var oj = document.createElement('script'); 
+    oj.setAttribute('src', 'http://ramanuj.me/monetate/mtintel/opti.js');                  
+    document.body.appendChild(oj); 
+    var oc = document.createElement('link');
+    oc.rel = 'stylesheet';
+    oc.type = 'text/css';
+    oc.setAttribute('href', 'http://ramanuj.me/monetate/mtintel/opti.css');
+    document.body.appendChild(oc); 
 }

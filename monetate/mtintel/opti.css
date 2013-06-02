@@ -1,20 +1,17 @@
 #mtintel-container {
-  position: relative;
+  position: fixed;
   width: 900px;
   margin: 0 auto;
-  overflow: hidden;
-  height: 400px;
+  overflow: auto;
+  min-height : 400px;
+  z-index: 2147483647;
+  top:0px;
 }
 
 #mtintel-wrapper p, #mtintel-wrapper h1, #mtintel-wrapper h2, #mtintel-wrapper h3, #mtintel-wrapper h4, #mtintel-wrapper h5, #mtintel-wrapper h6 {
   margin-top: 0 !important;
 }
-#mtintel-wrapper {
-  position: relative;
-  width: 900px;
-  margin: 0 auto;
-  height: 1px;
-}
+
 #mtintel-wrapper .navbar {
   width: 940px;
   height: 42px;
