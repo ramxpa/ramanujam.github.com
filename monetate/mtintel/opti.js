@@ -7,6 +7,8 @@ optiIntel.detectOptiExperiments = function(){
     var mtContainer = document.getElementById('mtintel-container');
     if (!mtContainer) {
         optiIntel.insertDisplayPanel();
+    } else {
+        mtContainer.show();
     }
 
     if (opti) {
