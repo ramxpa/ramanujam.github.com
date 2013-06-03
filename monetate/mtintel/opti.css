@@ -99,6 +99,10 @@
   width: 84px;
 }
 
+#mtintel-wrapper .exp-data-row {
+  color: #3d3d3d !important;
+}
+
 #mtintel-wrapper .variations-list {
   list-style: none;
 }
