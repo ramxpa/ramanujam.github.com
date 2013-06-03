@@ -120,10 +120,6 @@
   border-spacing: 0;
 }
 
-#mtintel-wrapper .table {
-  width: 100%;
-  margin-bottom: 20px;
-}
 
 #mtintel-wrapper .table th,
 #mtintel-wrapper .table td {
@@ -157,11 +153,6 @@
 
 #mtintel-wrapper .table .table {
   background-color: #ffffff;
-}
-
-#mtintel-wrapper .table-condensed th,
-#mtintel-wrapper .table-condensed td {
-  padding: 4px 5px;
 }
 
 #mtintel-wrapper .table-striped tbody > tr:nth-child(odd) > td,
