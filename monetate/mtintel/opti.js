@@ -114,7 +114,12 @@ optiIntel.closebuttonClick = function(){
 };
 
 optiIntel.init = function () {
-    $(document).ready(function() {
-        optiIntel.detectOptiExperiments();
-    });
+    if (window.jQuery) {
+        $(document).ready(function() {
+            optiIntel.detectOptiExperiments();
+        });
+    }
+    else {
+        window.setTimeout(optiIntel.detectOptiExperiments(), 300);
+    }
 }();
