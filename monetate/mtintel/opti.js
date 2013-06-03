@@ -3,13 +3,7 @@ var optiIntel = window.optiInfo || {};
 
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
-
-    // var mtContainer = $('#mtintel-container');
-    // if (!mtContainer) {
-    //     optiIntel.insertDisplayPanel();
-    // } else {
-    //     mtContainer.show();
-    // }
+    optiIntel.insertDisplayPanel();
 
     if (opti) {
         var allExperiments = opti.allExperiments;
