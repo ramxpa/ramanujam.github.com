@@ -28,11 +28,11 @@
 }
 
 #mtintel-wrapper .navbar .navbar-inner .close-button {
-  font-size:20px;
-  top:3px;
-  right:5px;
-  color: #3d3d3d;
-
+  position: absolute;
+  font-size:22px;
+  top:7px;
+  right:10px;
+  color: #3d3d3d; 
 }
 
 #mtintel-wrapper .heading {
@@ -44,12 +44,16 @@
   left: 11px;
 }
 
-#mtintel-wrapper .table.table-striped {
+#mtintel-wrapper .table .total-numbers {
   width: 400px;
   height: 53px;
-  position: absolute;
   top: 54px;
   left: 265px;
+  border: none;
+}
+
+.total-numbers .td {
+  border:none !important;
 }
 
 #mtintel-wrapper .table {
@@ -59,7 +63,7 @@
 #mtintel-wrapper .table.table-1 {
   width: 807px;
   height: 168px;
-  top: 173px;
+  top: 150px;
   left: 46px;
 }
 

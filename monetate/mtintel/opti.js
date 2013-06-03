@@ -55,7 +55,7 @@ optiIntel.insertDisplayPanel = function(experimentNames) {
         containerDiv.id = 'mtintel-container';
         containerDiv.innerHTML = '<div id="mtintel-wrapper"><div class="navbar">'+
         '<div class="navbar-inner"><span class="close-button">x</span></div><h2 class="heading">Optimizely Campaigns</h2>'+
-        '</div><table class="table table-striped total-numbers"><thead><tr><th>Experiments'+
+        '</div><table class="table total-numbers"><thead><tr><th>Experiments'+
         '</th><th>Variations</th><th>Active</th></tr></thead><tbody><tr>'+
         '<td class="total-exp"></td><td class="total-var"></td><td class="total-active">'+
         '</td></tr></tbody></table><table class="table table-bordered table-striped table-1'+
