@@ -120,6 +120,12 @@ optiIntel.init = function () {
         });
     }
     else {
-        window.setTimeout(optiIntel.detectOptiExperiments(), 300);
+        window.setTimeout(function(){
+            if (window.jQuery) {
+                $(document).ready(function() {
+                    optiIntel.detectOptiExperiments();
+                });
+            }
+        }, 500);
     }
 }();
