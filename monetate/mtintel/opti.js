@@ -79,7 +79,7 @@ optiIntel.insertData = function(optiData) {
         var variationNames = getVariationHtml(optiData[i].variation_names);
 
         expRow.innerHTML= '<td class="exp-name">'+ optiData[i].name +'</td>'+
-                      '<td class="var-name">'+ variationNames.innerHTML + '</td>'+
+                      '<td class="var-name">'+ variationNames.outerHTML + '</td>'+
                       '<td class="isactive">'+ optiData[i].enabled +'</td>';
         expDataTable.append(expRow);
     }
