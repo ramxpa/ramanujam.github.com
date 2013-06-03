@@ -114,5 +114,7 @@ optiIntel.closebuttonClick = function(){
 };
 
 optiIntel.init = function () {
-    optiIntel.detectOptiExperiments();
+    $(document).ready(function() {
+        optiIntel.detectOptiExperiments();
+    });
 }();
