@@ -67,6 +67,7 @@ optiIntel.insertDisplayPanel = function() {
         ' style="display:none">Not an Optimizely user.</div></div>';
     }
     optiIntel.closebuttonClick();
+    optiIntel.setLeftOffset();
 };
 
 
@@ -111,6 +112,11 @@ optiIntel.closebuttonClick = function(){
     $('.close-button').click(function() {
         $('#mtintel-container').remove();
     });
+};
+
+optiIntel.setLeftOffset = function() {
+    var leftOffset = (window.screen.availWidth - 900)/2;
+    $(#mtintel-container).css('left', leftOffset);
 };
 
 optiIntel.init = function () {
