@@ -53,7 +53,15 @@ optiIntel.insertDisplayPanel = function(experimentNames) {
         var containerDiv = document.createElement('div');
         bodyTag.appendChild(containerDiv);
         containerDiv.id = 'mtintel-container';
-        containerDiv.innerHTML = '<div id="mtintel-wrapper"><div class="navbar"><div class="navbar-inner"></div><h2 class="heading">Optimizely Campaigns</h2></div><table class="table table-striped total-numbers"><thead><tr><th>Experiments</th><th>Variations</th><th>Active</th></tr></thead><tbody><tr><td class="total-exp"></td><td class="total-var"></td><td class="total-active"></td></tr></tbody></table><table class="table table-bordered table-striped table-1 data-table"><thead><tr><th class="th-1">Experiment Name</th><th class="th-2">Variations</th><th class="th-3">Active</th></tr></thead><tbody class="exp-data-table-body"></tbody></table></div>';
+        containerDiv.innerHTML = '<div id="mtintel-wrapper"><div class="navbar">'+
+        '<div class="navbar-inner"><span class="close-button">x</span></div><h2 class="heading">Optimizely Campaigns</h2>'+
+        '</div><table class="table table-striped total-numbers"><thead><tr><th>Experiments'+
+        '</th><th>Variations</th><th>Active</th></tr></thead><tbody><tr>'+
+        '<td class="total-exp"></td><td class="total-var"></td><td class="total-active">'+
+        '</td></tr></tbody></table><table class="table table-bordered table-striped table-1'+
+        ' data-table"><thead><tr><th class="th-1">Experiment Name</th><th class="th-2">'+
+        'Variations</th><th class="th-3">Active</th></tr></thead><tbody '+
+        'class="exp-data-table-body"></tbody></table></div>';
     }
 };
 
