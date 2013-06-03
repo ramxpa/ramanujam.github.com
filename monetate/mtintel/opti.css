@@ -1,5 +1,5 @@
 #mtintel-container {
-  font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: Helvetica,Arial,Verdana,Sans-serif !important;  
   position: fixed;
   width: 900px;
   margin: 0 auto;
@@ -45,7 +45,7 @@
   position: absolute;
   top: 5px;
   left: 11px;
-  color: #fff;
+  color: #fff !important;
 }
 
 #mtintel-wrapper .total-numbers {
@@ -71,7 +71,7 @@
 }
 
 .data-table th {
-  color: #fff;
+  color: #fff !important;
   background: #34495E !important;
 }
 
@@ -116,11 +116,11 @@
 
 #mtintel-wrapper h2 {
   font-size: 22px;
-  color: #3d3d3d;
+  color: #3d3d3d !important;
 }
 
 #mtintel-wrapper .navbar {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #2C3E50 !important;
 }
 
@@ -164,7 +164,7 @@
 }
 
 #mtintel-wrapper .table .table {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 #mtintel-wrapper .table-striped tbody > tr:nth-child(odd) > td,
