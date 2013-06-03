@@ -4,12 +4,12 @@ var optiIntel = window.optiInfo || {};
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
 
-    var mtContainer = $('#mtintel-container');
-    if (!mtContainer) {
-        optiIntel.insertDisplayPanel();
-    } else {
-        mtContainer.show();
-    }
+    // var mtContainer = $('#mtintel-container');
+    // if (!mtContainer) {
+    //     optiIntel.insertDisplayPanel();
+    // } else {
+    //     mtContainer.show();
+    // }
 
     if (opti) {
         var allExperiments = opti.allExperiments;
