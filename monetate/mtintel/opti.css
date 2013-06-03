@@ -44,7 +44,7 @@
   left: 11px;
 }
 
-#mtintel-wrapper .table .total-numbers {
+#mtintel-wrapper .total-numbers {
   width: 400px;
   height: 53px;
   top: 54px;
@@ -78,6 +78,11 @@
 #mtintel-wrapper .table.table-1 thead tr th.th-3 {
   width: 84px;
 }
+
+#mtintel-wrapper .variations-list {
+  list-style: none;
+}
+
 
 /*Bootstrap Styles
 */
