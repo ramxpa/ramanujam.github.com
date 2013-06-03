@@ -4,7 +4,7 @@ var optiIntel = window.optiInfo || {};
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
 
-    var mtContainer = document.getElementById('mtintel-container');
+    var mtContainer = $('#mtintel-container');
     if (!mtContainer) {
         optiIntel.insertDisplayPanel();
     } else {
