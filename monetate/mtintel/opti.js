@@ -6,48 +6,51 @@ optiIntel.detectOptiExperiments = function(){
     var allExperiments = opti.allExperiments;
     var allVariations = window.optimizely.allVariations;
 
-    var optiData = [];    
-    jQuery.map(allExperiments, function(value, key){
-        var optiExp = {};
-        optiExp.name = value.name;
-        optiExp.id = key;
-        optiExp.variation_ids = value.variation_ids;
-        optiExp.variation_names = optiIntel.getVariationNames(value.variation_ids, allVariations);
-        optiExp.enabled = value.enabled ? 'Yes' : 'No';
-        optiData.push(optiExp);
-    });
+    optiIntel.insertDisplayPanel();
 
-    optiData.totalExp = optiData.length;
-    optiData.totalVariations = Object.keys(allVariations).length;
+    if (allVariations.length) {
+        var optiData = [];    
+        jQuery.map(allExperiments, function(value, key){
+            var optiExp = {};
+            optiExp.name = value.name;
+            optiExp.id = key;
+            optiExp.variation_ids = value.variation_ids;
+            optiExp.variation_names = optiIntel.getVariationNames(value.variation_ids, allVariations);
+            optiExp.enabled = value.enabled ? 'Yes' : 'No';
+            optiData.push(optiExp);
+        });
 
-    var activeCount = 0;
-    for (var i = 0; i < optiData.length; i++) {
-        if (optiData[i].enabled === 'Yes') {
-            activeCount++;
+        optiData.totalExp = optiData.length;
+        optiData.totalVariations = Object.keys(allVariations).length;
+
+        var activeCount = 0;
+        for (var i = 0; i < optiData.length; i++) {
+            if (optiData[i].enabled === 'Yes') {
+                activeCount++;
+            }
         }
+
+        optiData.totalActive = activeCount;
+        optiIntel.insertData(optiData);
+    } else {
+        optiIntel.notAnOptiUser();
     }
-
-    optiData.totalActive = activeCount;
-
-    console.log('optiData--', optiData);
-
-    optiIntel.insertDisplayPanel(optiData);
-    optiIntel.insertData(optiData);
 };
+
 
 optiIntel.getVariationNames = function(variation_ids, allVariations) {
-        var variationNames = [];
-        for (var i = 0; i < variation_ids.length; i++) {
-            jQuery.each(allVariations, function(key, value){
-                if (key == variation_ids[i]){
-                    variationNames.push(value.name);
-                }
-            });
-        }
-        return variationNames;
+    var variationNames = [];
+    for (var i = 0; i < variation_ids.length; i++) {
+        jQuery.each(allVariations, function(key, value){
+            if (key == variation_ids[i]){
+                variationNames.push(value.name);
+            }
+        });
+    }
+    return variationNames;
 };
 
-optiIntel.insertDisplayPanel = function(experimentNames) {
+optiIntel.insertDisplayPanel = function() {
     var bodyTag = document.getElementsByTagName('body')[0];
     if (bodyTag) {
         var containerDiv = document.createElement('div');
@@ -61,7 +64,8 @@ optiIntel.insertDisplayPanel = function(experimentNames) {
         '</td></tr></tbody></table><table class="table table-bordered table-striped table-1'+
         ' data-table"><thead><tr><th class="th-1">Experiment Name</th><th class="th-2">'+
         'Variations</th><th class="th-3">Active</th></tr></thead><tbody '+
-        'class="exp-data-table-body"></tbody></table></div>';
+        'class="exp-data-table-body"></tbody></table><div class="not-a-sucker"'+
+        ' style="display:none">Not an Optimizely user.</div></div>';
     }
 };
 
@@ -94,6 +98,13 @@ optiIntel.insertData = function(optiData) {
         }
         return variationUl;
     }
+};
+
+optiIntel.notAnOptiUser = function() {
+    $('.total-numbers').hide();
+    $('.data-table').hide();
+    $('.not-a-sucker').show();
+
 };
 
 optiIntel.init = function () {
