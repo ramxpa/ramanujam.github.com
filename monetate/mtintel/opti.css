@@ -29,9 +29,9 @@
 
 #mtintel-wrapper .navbar .navbar-inner .close-button {
   position: absolute;
-  font-size:22px;
+  font-size:24px;
   top:7px;
-  right:10px;
+  right:15px;
   cursor: pointer;
 }
 
