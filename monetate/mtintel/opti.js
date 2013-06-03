@@ -56,7 +56,7 @@ optiIntel.insertDisplayPanel = function() {
         bodyTag.appendChild(containerDiv);
         containerDiv.id = 'mtintel-container';
         containerDiv.innerHTML = '<div id="mtintel-wrapper"><div class="navbar">'+
-        '<div class="navbar-inner"><span class="close-button">x</span></div><h2 class="heading">Optimizely Campaigns</h2>'+
+        '<div class="navbar-inner"><span class="mt-close-button">x</span></div><h2 class="heading">Optimizely Campaigns</h2>'+
         '</div><table class="table total-numbers"><thead><tr><th>Experiments'+
         '</th><th>Variations</th><th>Active</th></tr></thead><tbody><tr>'+
         '<td class="total-exp"></td><td class="total-var"></td><td class="total-active">'+
@@ -109,7 +109,7 @@ optiIntel.notAnOptiUser = function() {
 };
 
 optiIntel.closebuttonClick = function(){
-    $('.close-button').click(function() {
+    $('.mt-close-button').click(function() {
         $('#mtintel-container').remove();
     });
 };
