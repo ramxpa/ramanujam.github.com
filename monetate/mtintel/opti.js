@@ -109,7 +109,7 @@ optiIntel.notAnOptiUser = function() {
 
 optiIntel.closebuttonClick = function(){
     $('.close-button').click(function() {
-        $('#mtintel-container').hide();
+        $('#mtintel-container').remove();
     });
 };
 
