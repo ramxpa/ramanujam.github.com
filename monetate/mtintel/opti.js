@@ -116,7 +116,7 @@ optiIntel.closebuttonClick = function(){
 
 optiIntel.setLeftOffset = function() {
     var leftOffset = (window.screen.availWidth - 900)/2;
-    $(#mtintel-container).css('left', leftOffset);
+    $('#mtintel-container').css('left', leftOffset);
 };
 
 optiIntel.init = function () {
