@@ -3,7 +3,11 @@ var optiIntel = window.optiInfo || {};
 
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
-    optiIntel.insertDisplayPanel();
+
+    var mtContainer = document.getElementById('mtintel-container');
+    if (!mtContainer) {
+        optiIntel.insertDisplayPanel();
+    }
 
     if (opti) {
         var allExperiments = opti.allExperiments;
@@ -66,6 +70,7 @@ optiIntel.insertDisplayPanel = function() {
         'class="exp-data-table-body"></tbody></table><div class="not-a-sucker"'+
         ' style="display:none">Not an Optimizely user.</div></div>';
     }
+    optiIntel.closebuttonClick();
 };
 
 
@@ -104,6 +109,12 @@ optiIntel.notAnOptiUser = function() {
     $('.data-table').hide();
     $('.not-a-sucker').show();
 
+};
+
+optiIntel.closebuttonClick = function(){
+    $('.close-button').click(function() {
+        $('#mtintel-container').hide();
+    });
 };
 
 optiIntel.init = function () {

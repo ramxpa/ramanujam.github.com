@@ -98,6 +98,14 @@
   list-style: none;
 }
 
+#mtintel-wrapper .not-a-sucker {
+  font-size: 30px;
+  top: 200px;
+  position: absolute;
+  text-align: center;
+  left: 250px;
+}
+
 
 /*Bootstrap Styles
 */
