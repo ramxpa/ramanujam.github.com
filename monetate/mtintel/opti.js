@@ -3,12 +3,11 @@ var optiIntel = window.optiInfo || {};
 
 optiIntel.detectOptiExperiments = function(){
     var opti = window.optimizely;
-    var allExperiments = opti.allExperiments;
-    var allVariations = window.optimizely.allVariations;
-
     optiIntel.insertDisplayPanel();
 
-    if (allVariations.length) {
+    if (opti) {
+        var allExperiments = opti.allExperiments;
+        var allVariations = window.optimizely.allVariations;
         var optiData = [];    
         jQuery.map(allExperiments, function(value, key){
             var optiExp = {};
