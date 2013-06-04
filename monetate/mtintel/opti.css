@@ -1,5 +1,7 @@
 #mtintel-container {
-  font-family: Helvetica,Arial,Verdana,Sans-serif !important;  
+  font-family: Helvetica,Arial,Verdana,Sans-serif !important;
+  font-size: 12px !important;
+  color: #3d3d3d !important;  
   position: fixed;
   width: 900px;
   margin: 0 auto;
