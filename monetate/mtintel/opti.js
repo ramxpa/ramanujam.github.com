@@ -9,7 +9,7 @@ optiIntel.detectOptiExperiments = function(){
         var allExperiments = opti.allExperiments;
         var allVariations = opti.allVariations;
         var optiData = [];    
-        jQuery.map(allExperiments, function(value, key){
+        jQuery.each(allExperiments, function(key, value){
             var optiExp = {};
             optiExp.name = value.name;
             optiExp.id = key;
