@@ -7,9 +7,9 @@ optiIntel.detectOptiExperiments = function(){
 
     if (opti) {
         var allExperiments = opti.allExperiments;
-        var allVariations = window.optimizely.allVariations;
+        var allVariations = opti.allVariations;
         var optiData = [];    
-        jQuery.map(allExperiments, function(value, key){
+        jQuery.each(allExperiments, function(value, key){
             var optiExp = {};
             optiExp.name = value.name;
             optiExp.id = key;
