@@ -13,7 +13,7 @@ optiIntel.detectOptiExperiments = function(){
             var optiExp = {};
             optiExp.name = value.name;
             optiExp.id = key;
-            optiExp.variation_ids = value.variation_ids;
+            optiExp.variation_ids = value.variation_ids ? value.variation_ids : value.enabled_variation_ids;
             optiExp.variation_names = optiIntel.getVariationNames(value.variation_ids, allVariations);
             optiExp.enabled = value.enabled ? 'Yes' : 'No';
             optiData.push(optiExp);
