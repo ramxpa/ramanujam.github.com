@@ -14,7 +14,7 @@ optiIntel.detectOptiExperiments = function(){
             optiExp.name = value.name;
             optiExp.id = key;
             optiExp.variation_ids = value.variation_ids ? value.variation_ids : value.enabled_variation_ids;
-            optiExp.variation_names = optiIntel.getVariationNames(value.variation_ids, allVariations);
+            optiExp.variation_names = optiIntel.getVariationNames(optiExp.variation_ids, allVariations);
             optiExp.enabled = value.enabled ? 'Yes' : 'No';
             optiData.push(optiExp);
         });
@@ -39,12 +39,14 @@ optiIntel.detectOptiExperiments = function(){
 
 optiIntel.getVariationNames = function(variation_ids, allVariations) {
     var variationNames = [];
-    for (var i = 0; i < variation_ids.length; i++) {
-        jQuery.each(allVariations, function(key, value){
-            if (key == variation_ids[i]){
-                variationNames.push(value.name);
-            }
-        });
+    if (variation_ids && allVariations) {
+        for (var i = 0; i < variation_ids.length; i++) {
+            jQuery.each(allVariations, function(key, value){
+                if (key == variation_ids[i]){
+                    variationNames.push(value.name);
+                }
+            });
+        }
     }
     return variationNames;
 };
