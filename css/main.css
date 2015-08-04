@@ -219,6 +219,11 @@ nav.links a {
 and (min-device-width :320px) 
 and (max-device-width : 480px) {
 
+    body {
+
+        font-size: 22px;
+    }
+
     #sidebar {
         display:none;
     }
